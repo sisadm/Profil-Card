@@ -1,7 +1,14 @@
 // Media queries 
 
-@mixin media($size) {
-    @media screen and (min-width: $size) {
-        @content;
+@mixin media($set, $size) {
+    @if($set == min) {
+        @media screen and (min-width: $size) {
+            @content;
+        }
+    }
+    @else {
+        @media screen and (max-width: $size) {
+            @content;
+        } 
     }
 }
