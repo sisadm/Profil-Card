@@ -5,7 +5,10 @@ $Dark-grayish-blue: hsl(227, 10%, 46%);
 $Dark-gray: hsl(0, 0%, 59%);
 
 // Font
-$Main-font: [Kumbh Sans]'(https://fonts.google.com/specimen/Kumbh+Sans)', Helvetica, sans-serif ;
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+$Main-font: 'Kumbh Sans', Helvetica, sans-serif ;
 
 // Font size
 $Basic-size: 18px;
