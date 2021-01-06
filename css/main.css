@@ -1,7 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+@media screen and (max-width: 240px) {
+  .circle {
+    width: 250px;
+    height: 250px;
+  }
+
+  .top-circle {
+    left: -5em;
+    top: -5em;
+  }
+
+  .btm-circle {
+    right: -5em;
+    bottom: -5em;
+  }
+}
+@media screen and (min-width: 241px) {
+  .top-circle {
+    left: -10em;
+    top: -10em;
+  }
+
+  .btm-circle {
+    right: -10em;
+    bottom: -10em;
+  }
+}
+@media screen and (min-width: 241px) and (max-width: 749px) {
+  .circle {
+    width: 400px;
+    height: 400px;
+  }
+}
 @media screen and (min-width: 750px) {
-  img {
-    width: 500px !important;
-    height: 500px !important;
+  .circle {
+    width: 500px;
+    height: 500px;
   }
 }
 * {
@@ -16,22 +50,77 @@ html, body {
   background-color: #19a2ae;
   position: relative;
   overflow: hidden;
+  z-index: 0;
 }
 
-img {
+.circle {
   position: absolute;
-  width: 400px;
-  height: 400px;
+  z-index: 1;
 }
 
-.top-circle {
-  left: -10em;
-  top: -10em;
+.main {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  background-color: #fff;
+  font-family: "Kumbh Sans", Helvetica, sans-serif;
+  width: 80%;
+  height: 70%;
 }
 
-.btm-circle {
-  right: -10em;
-  bottom: -10em;
+.cardBack {
+  background: url(../images/bg-pattern-card.svg) no-repeat center;
+  width: 100%;
+  height: 35%;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+#profil-pic {
+  display: block;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  margin: -2em auto 0;
+  padding: 3px;
+  background-color: #fff;
+}
+
+.info p, .info .social-part p {
+  color: #6a6f81;
+  font-size: 14px;
+}
+.info .header p:first-of-type, .info .social-part h2 {
+  font-size: 18px;
+}
+
+.header {
+  margin: 1em auto;
+  text-align: center;
+}
+.header h2, .header .age {
+  display: inline-block;
+  margin: 0.1em 0.2em;
+}
+.header h2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+.header p:nth-of-type(2) {
+  margin: 1em;
+}
+
+.social-part {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #969696;
+  text-align: center;
+}
+.social-part div {
+  margin-top: 1em;
 }
 
 /*# sourceMappingURL=main.css.map */
