@@ -1,6 +1,42 @@
-@include media(750px) {
-    img {
-        width: 500px !important;
-        height: 500px !important;
+@include media(max, 240px) {
+    .circle {
+        width: 250px;
+        height: 250px;
+    }
+    .top-circle {
+        left: -5em;
+        top: -5em;
+    }
+    
+    .btm-circle {
+        right: -5em;
+        bottom: -5em;
+    }
+}
+
+@include media(min, 241px) {
+    .top-circle {
+        left: -10em;
+        top: -10em;
+    }
+
+    .btm-circle {
+        right: -10em;
+        bottom: -10em;
+    }
+
+    @include media(max, 749px) {
+        .circle {
+            width: 400px ;
+            height: 400px ;
+        }
+    }
+    
+}
+
+@include media(min, 750px) {
+    .circle {
+        width: 500px ;
+        height: 500px ;
     }
 }
