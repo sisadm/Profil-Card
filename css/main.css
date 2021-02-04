@@ -73,6 +73,7 @@ html, body {
 
 .cardBack {
   background: url(../images/bg-pattern-card.svg) no-repeat center;
+  background-size: cover;
   width: 100%;
   height: 35%;
   border-top-right-radius: 15px;
